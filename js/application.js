@@ -12,6 +12,8 @@ var updateItemTotal = function(el) {
 
   } else {
 
+    $(el).find('.item-total-price').text('$--.--');
+
     return 0;
   }
 
@@ -43,6 +45,7 @@ $(document).ready(function() {
   });
 
   $(document).on('input', 'tr input', function() {
+    console.log('hi')
     updateTotalPrice();
 
   });
